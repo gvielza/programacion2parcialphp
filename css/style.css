@@ -1,0 +1,173 @@
+body {
+  font-family: "Raleway", sans-serif;
+  overflow-x: hidden;
+  background-color: #edf2f4;
+  color: #444343;
+}
+
+nav {
+  background-color: #8d99ae;
+  font-size: 20px;
+  font-weight: bold;
+
+}
+
+.nav-link {
+    margin: 0 10px;
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 4px;
+    color: #ddd;
+  }
+
+.dropdown-menu{
+    background-color: #a9b0bd;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.logo{
+    max-width:40%;
+}
+
+h1 {
+  font-family: "Shantell Sans", cursive;
+  color: #f66880;
+  text-shadow: 1px 1px 2px black;
+}
+
+h2 {
+  font-size: 14 px;
+  
+}
+
+.subtitulo {
+  font-size: 10 px;
+  font-weight: bold;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  padding-left: 2em;
+}
+
+.phome {
+  font-size: 20px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  padding-left: 3em;
+  padding-right: 3em;
+}
+
+/*---CARD---*/
+.card {
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 10px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Imagen del producto */
+.product-image {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Precio del producto */
+.product-price {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Botón de compra */
+.btn-custom {
+  padding: 10px 20px;
+  background-color: #EF233C;
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-custom:hover {
+  background-color: #2980b9;
+}
+
+/* ---QUIENES SOMOS--- */
+.program {
+    text-align: center;
+    margin-top: 2em;
+}
+
+.container-perfil {
+  
+        display: flex;
+        justify-content: center;
+        
+        height: 100vh;
+      }
+      
+      .card-container {
+        display: flex;
+        flex-direction: column;
+     
+        width: 80%;
+        max-width: 600px;
+        padding: 40px;
+        background-color: #ffffff;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        text-align: center;
+      }
+      
+      .card-image {
+        max-width: 300px;
+        margin-bottom: 30px;
+        border-radius: 5%;
+        align-items: center;
+
+        margin-left: 5em;
+      }
+      
+      .card-name {
+        font-size: 32px;
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+      
+      .card-occupation {
+        font-size: 24px;
+        color: #888888;
+        margin-bottom: 20px;
+      }
+      
+      .card-contact {
+        font-size: 18px;
+        color: #333333;
+      }
+
+
+/* ---FORMULARIO */
+.containerForm {
+  background-color: #ef233c;
+  margin-top: 5%;
+  border-radius: 2%;
+  padding-top: 3em;
+  width: 80vw;
+  margin-left: 10%;
+}
+#form {
+  background-color: #003049;
+  border-radius: 1%;
+  border-color: #e5e5e5;
+  font-size: 20px;
+  font-family: "Raleway", sans-serif;
+  color: #e5e5e5;
+}
+
+/* Footer */
+.footer {
+  background: #2b2d42;
+  color: white;
+  font-size: 16px;
+  font-family: "Raleway", sans-serif;
+}
+
