@@ -16,7 +16,9 @@ class Juguete
 
 /**
  * Devuelve el catalogo completo
+ * @return Juguete[]
  */
+
 public function catalogo_completo(): array
     {
        $conexion = (new Conexion())->getConexion();
@@ -49,20 +51,20 @@ public function catalogo_completo(): array
         return $catalogo;
        
     }
-    public function tipo_material(int $material_id): string
+    public function get_tipo_material(int $material_id): string
     {
        $conexion = (new Conexion())->getConexion();
-       $query = "SELECT nombre FROM material INNER JOIN  juguetes on material.id=juguetes.material_id
-       WHERE material.material_id=$material_id";
+       $query = "SELECT material.nombre FROM material INNER JOIN  juguetes on material.id=juguetes.material_id
+       WHERE material.id=$material_id";
        
 
        $PDOStatement = $conexion-> prepare ($query);
        $PDOStatement -> setFetchMode(PDO::FETCH_CLASS, self::class);
        $PDOStatement->execute();
 
-       $mat= $PDOStatement->fetch();
+       $mat = $PDOStatement->fetch(PDO::FETCH_ASSOC);
 
-        return $mat;
+   return $mat['nombre'];
        
     }
 

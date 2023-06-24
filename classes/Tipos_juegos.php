@@ -93,6 +93,19 @@ class Tipos_juegos
     {
         return $this->id;
     }
+//Obtener tipo de  juego
+public function getTipo(int $id): string {
+    $conexion = (new Conexion())->getConexion();
+    $query = "SELECT tipos FROM tipos_juegos WHERE id = $id";
 
-  
+    $PDOStatement = $conexion->prepare($query);
+    $PDOStatement->setFetchMode(PDO::FETCH_CLASS, self::class);
+    $PDOStatement->execute();
+
+    $result = $PDOStatement->fetch(PDO::FETCH_ASSOC);
+
+    
+    return $result['tipos'];
+}
+
 }

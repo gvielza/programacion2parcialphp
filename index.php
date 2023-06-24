@@ -34,6 +34,7 @@ if (!array_key_exists($vis, $secciones_validas)) {
   $titulo = $secciones_validas[$vis]['titulo'];
 }
 
+
 ?>
 
 <!DOCTYPE html>
@@ -83,12 +84,13 @@ if (!array_key_exists($vis, $secciones_validas)) {
               Juguetes
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="index.php?vis=juguetes">Todos</a></li>
+            
+            <li><a class="dropdown-item" href="index.php?vis=juguetes&juego=all">Todos</a></li>
               <li><a class="dropdown-item" href="index.php?vis=juguetes&jgo=1">Encastre</a></li>
               <li><a class="dropdown-item" href="index.php?vis=juguetes&jgo=2">Pizarras</a></li>
               <li><a class="dropdown-item" href="index.php?vis=juguetes&jgo=3">Rompecabezas</a></li>
               <li><a class="dropdown-item" href="index.php?vis=juguetes&jgo=4">Linea sensorial</a></li>
-              <li><a class="dropdown-item" href="index.php?vis=juguetes&jgo=4">Pedagogías</a></li>
+              <li><a class="dropdown-item" href="index.php?vis=juguetes&jgo=5">Pedagogías</a></li>
             </ul>
           </li>
 
@@ -120,6 +122,14 @@ if (!array_key_exists($vis, $secciones_validas)) {
 
 
     require_once file_exists("views/$ver.php") ? "views/$ver.php" : "views/404.php";
+    if (isset($_GET['vis']) && $_GET['vis'] === 'juguetes') {
+      $miObjetoJuguete = new Juguete();
+      $catalogoCompleto = $miObjetoJuguete->catalogo_completo();
+  
+      // Aquí puedes realizar el procesamiento o la visualización del catálogo completo de juguetes
+      // ...
+  }
+  
     ?>;
 
 
