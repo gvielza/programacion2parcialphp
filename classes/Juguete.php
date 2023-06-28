@@ -68,6 +68,23 @@ public function catalogo_completo(): array
        
     }
 
+    public function get_tipo_juego(int $tipo_juego_id): string
+    {
+       $conexion = (new Conexion())->getConexion();
+       $query = "SELECT tipos_juegos.tipos FROM tipos_juegos INNER JOIN  juguetes on tipos_juegos.id=juguetes.tipo_juego_id
+       WHERE tipos_juegos.id=$tipo_juego_id";
+       
+
+       $PDOStatement = $conexion-> prepare ($query);
+       $PDOStatement -> setFetchMode(PDO::FETCH_CLASS, self::class);
+       $PDOStatement->execute();
+
+       $mat = $PDOStatement->fetch(PDO::FETCH_ASSOC);
+
+   return $mat['tipos'];
+       
+    }
+
 
 
     /**

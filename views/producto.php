@@ -21,7 +21,7 @@ $juguete = $miObjetoJuguete->producto_x_id($idProducto);
                                     <p class="card-text"><?= $juguete->getDescripcion()?></p>
                                 </div>
                                 <ul class="list-group list-group-flush">
-                                    <li class="list-group-item">Tipo de juego: <?= $juguete->getTipo_juego_id()?></li>
+                                    <li class="list-group-item">Tipo de juego: <?= $juguete->get_tipo_juego($juguete->getTipo_juego_id())?></li>
                                     <li class="list-group-item">Edad recomendada: <?= $juguete->getEdad_recomendada_id() ?> año/s</li>
                                     <li class="list-group-item">Cant. piezas: <?= $juguete->getCantidad_piezas()?></li>
                                     <li class="list-group-item">Tipo de material: <?= $juguete->get_tipo_material($juguete->getMaterial_id())?></li>

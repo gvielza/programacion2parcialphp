@@ -12,13 +12,14 @@ $catalogo = $miObjetoJuguete->catalogo_tipo_juego($tipos_juguetes);
 $miobjetoTipoJuguete = new Tipos_juegos();
 //$obj = intval($miobjetoTipoJuguete->getTipo($tit));
 
- 
+
 ?>
 
 <div class=" d-flex justify-content-center p-5">
     <div>
     <?php
-echo ($tit === '1' || $tit === '2' || $tit === '3' || $tit === '4') ? '<h1 class="text-center mb-4 fw-bold">Juguetes de ' . $tit . '</h1>' :
+    
+echo ($tit === '1' || $tit === '2' || $tit === '3' || $tit === '4') ? '<h1 class="text-center mb-4 fw-bold">Juguetes de ' . $miObjetoJuguete->get_tipo_material($tit) . '</h1>' :
 '<h1 class="text-center mb-4 fw-bold">Todos los Juguetes</h1>';
 
 // Resto del código...
@@ -37,8 +38,8 @@ echo ($tit === '1' || $tit === '2' || $tit === '3' || $tit === '4') ? '<h1 class
                                     <p class="card-text"><?= $juguete->bajada_reducida(20) ?></p>
                                 </div>
                                 <ul class="list-group list-group-flush">
-                                    <li class="list-group-item">Tipo de juego: <?= $juguete->getTipo_juego_id()?></li>
-                                    <li class="list-group-item">Tipo de material: <?= $juguete->getMaterial_id()?></li>
+                                    <li class="list-group-item">Tipo de juego: <?= $juguete->get_tipo_juego($juguete->getTipo_juego_id())?></li>
+                                    <li class="list-group-item">Tipo de material: <?= $juguete->get_tipo_material($juguete->getMaterial_id())?></li>
                                     <li class="list-group-item">Cant. piezas: <?= $juguete->getCantidad_piezas()?></li>
                                     <li class="list-group-item">Edad recomendada: <?= $juguete->getEdad_recomendada_id()?> año/s</li>
                                   
@@ -70,8 +71,8 @@ foreach ($catalogoCompleto as $juguete) { ?>
                 <p class="card-text"><?= $juguete->bajada_reducida(20) ?></p>
             </div>
             <ul class="list-group list-group-flush">
-                <li class="list-group-item">Tipo de juego: <?= $juguete->getTipo_juego_id()?></li>
-                <li class="list-group-item">Tipo de material: <?= $juguete->getMaterial_id()?></li>
+                <li class="list-group-item">Tipo de juego: <?= $juguete->get_tipo_juego($juguete->getTipo_juego_id())?></li>
+                <li class="list-group-item">Tipo de material: <?= $juguete->get_tipo_material($juguete->getMaterial_id())?></li>
                 <li class="list-group-item">Cant. piezas: <?= $juguete->getCantidad_piezas()?></li>
                 <li class="list-group-item">Edad recomendada: <?= $juguete->getEdad_recomendada_id()?> año/s</li>
               
